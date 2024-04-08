@@ -1,10 +1,155 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #myInput {
+            background-position: 10px 12px;
+            background-repeat: no-repeat;
+            width: 100%;
+            font-size: 16px;
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+
+        #myUL {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+            #myUL li a {
+                border: 1px solid #ddd;
+                margin-top: -1px; /* Prevent double borders */
+                background-color: #f6f6f6;
+                padding: 12px;
+                text-decoration: none;
+                font-size: 18px;
+                color: black;
+                display: block
+            }
+
+                #myUL li a:hover:not(.header) {
+                    background-color: #eee;
+                }
+    </style>
 </head>
 <body>
-    <h1>welcome</h1>
+
+    <h2>Alcohol unit counter </h2>
+
+    <div>
+        <h3>Fruits</h3>
+        <label>
+            <input type="checkbox" class="radio" value="1" name="fooby[1][]" />Kiwi
+        </label>
+        <label>
+            <input type="checkbox" class="radio" value="1" name="fooby[1][]" />Jackfruit
+        </label>
+        <label>
+            <input type="checkbox" class="radio" value="1" name="fooby[1][]" />Mango
+        </label>
+    </div>
+
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for alcohol..." title="Type in an alcohol">
+
+    <button type="button" onclick="addAlcohol()"> submit </button>
+
+
+    <ul id="myUL">
+
+        <li>
+            <a href="#">beer</a>
+            <label>percentage</label>
+            <input type="number" id="4%" name="quantity" min="0" max="10000">
+            <img src="img/640x640.jpg" alt="beer">
+        </li>
+
+        <li>
+            <a href="#">beer2</a>
+            <label>percentage</label>
+            <input type="number" id="5.3%" name="quantity" min="0" max="10000">
+            <img src="img/640x640.jpg" alt="beer2">
+        </li>
+
+
+
+        <li><a href="#">brandy</a></li>
+
+        <li><a href="#">ale</a></li>
+        <li><a href="#">whiskey</a></li>
+
+        <li><a href="#">tequila</a></li>
+        <li><a href="#">red wine</a></li>
+        <li><a href="#">cider</a></li>
+
+    </ul>
+
+
+
+    <p id="alcohol"></p>
+
+    <script>
+
+        var total = 0
+
+        function myFunction() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+
+
+        function addAlcohol() {
+            // Select all input elements with the name "quantity" within <li> elements
+            const inputElements = document.querySelectorAll('li input[name="quantity"]');
+
+            let totalAlcohol = 0;
+
+            // Iterate through the input elements and calculate the total alcohol content
+            inputElements.forEach(function (inputElement) {
+                const percentage = parseFloat(inputElement.id.replace('%', ''));
+                // Get the quantity entered by the user
+                const quantity = parseFloat(inputElement.value) || 0;
+                // Calculate alcohol content based on percentage and quantity
+                const alcoholContent = (percentage / 1000) * quantity;
+                // Add to the total alcohol content
+                totalAlcohol += alcoholContent;
+            });
+
+            document.getElementById("alcohol").innerHTML = "<p>" + totalAlcohol + "</p>";
+        }
+
+        function bloodAlcoholContent(alcoholUnits, userWeight, sex) {
+            let alcoholWeight = alcoholUnits * 8;
+
+            if (sex == male) {
+                r = 0.55;
+            } else {
+                r = 0.68;
+            }
+
+            BAC = 100 * alcoholWeight / (userWeight * sex);
+        }
+
+        document.getElementById("alcohol").innerHTML = "<p>" + total + "</p>";
+    </script>
+
 </body>
 </html>
