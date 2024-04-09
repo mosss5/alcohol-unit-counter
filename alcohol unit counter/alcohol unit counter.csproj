@@ -7,9 +7,4 @@
     <RootNamespace>alcohol_unit_counter</RootNamespace>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="wwwroot\css\" />
-    <Folder Include="wwwroot\js\" />
-  </ItemGroup>
-
 </Project>

@@ -2,59 +2,39 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+    
 
-        #myInput {
-            background-position: 10px 12px;
-            background-repeat: no-repeat;
-            width: 100%;
-            font-size: 16px;
-            padding: 12px 20px 12px 40px;
-            border: 1px solid #ddd;
-            margin-bottom: 12px;
-        }
-
-        #myUL {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-            #myUL li a {
-                border: 1px solid #ddd;
-                margin-top: -1px; /* Prevent double borders */
-                background-color: #f6f6f6;
-                padding: 12px;
-                text-decoration: none;
-                font-size: 18px;
-                color: black;
-                display: block
-            }
-
-                #myUL li a:hover:not(.header) {
-                    background-color: #eee;
-                }
-    </style>
+    <link rel="stylesheet" href="css/StyleSheet.css"/>
+    
 </head>
 <body>
-
+    
     <h2>Alcohol unit counter </h2>
 
-    <div>
-        <h3>Fruits</h3>
+
+
+
+    <form>
         <label>
-            <input type="checkbox" class="radio" value="1" name="fooby[1][]" />Kiwi
+            <input type="radio" name="gender" value="male">
+            Male
         </label>
         <label>
-            <input type="checkbox" class="radio" value="1" name="fooby[1][]" />Jackfruit
+            <input type="radio" name="gender" value="female">
+            Female
         </label>
         <label>
-            <input type="checkbox" class="radio" value="1" name="fooby[1][]" />Mango
+            <input type="radio" name="gender" value="other">
+            Other
         </label>
-    </div>
+    </form>
+
+
+
+
+
+    <input type="number" id="inputWeight" placeholder="Enter your weight in Kg..." tital="Type in weight">
+
 
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for alcohol..." title="Type in an alcohol">
 
@@ -66,7 +46,7 @@
         <li>
             <a href="#">beer</a>
             <label>percentage</label>
-            <input type="number" id="4%" name="quantity" min="0" max="10000">
+            <input type="number" id="5.5%" name="quantity" min="0" max="10000">
             <img src="img/640x640.jpg" alt="beer">
         </li>
 
@@ -93,10 +73,11 @@
 
 
     <p id="alcohol"></p>
+    <p id="bac"></p>
 
     <script>
-
         var total = 0
+        var bacTotal = 0
 
         function myFunction() {
             var input, filter, ul, li, a, i, txtValue;
@@ -133,21 +114,41 @@
                 totalAlcohol += alcoholContent;
             });
 
+            bloodAlcoholContent(totalAlcohol);
             document.getElementById("alcohol").innerHTML = "<p>" + totalAlcohol + "</p>";
+
         }
 
-        function bloodAlcoholContent(alcoholUnits, userWeight, sex) {
-            let alcoholWeight = alcoholUnits * 8;
 
-            if (sex == male) {
-                r = 0.55;
-            } else {
+
+
+        function bloodAlcoholContent(alcoholUnits) {
+            let alcoholWeight = alcoholUnits * 8;
+            userWeight = document.getElementById("inputWeight");
+            const weight = parseFloat(userWeight.value) || 0;
+            const selectedGender = document.querySelector('input[name="gender"]:checked');
+            let bloodAlcohol = 1;
+
+
+            let r;
+            if (selectedGender.value == "male") {
                 r = 0.68;
+            } else {
+                r = 0.55;
             }
 
-            BAC = 100 * alcoholWeight / (userWeight * sex);
+            bloodAlcohol = 100 * alcoholWeight / ((weight * 1000) * r);
+
+            document.getElementById("bac").innerHTML = "<p>" + bloodAlcohol + "</p>";
         }
 
+
+
+
+
+
+
+        document.getElementById("bac").innerHTML = "<p>" + bacTotal + "</p>";
         document.getElementById("alcohol").innerHTML = "<p>" + total + "</p>";
     </script>
 
