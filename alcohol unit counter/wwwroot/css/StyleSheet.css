@@ -1,4 +1,78 @@
-﻿* {
+﻿body,h1,h2,h3 {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+.bg-image{
+    width: inherit;
+    height:1000px;
+    background: url(../img/gin_bottle.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    filter:blur(8px);
+    -webkit-filter:blur(8px);
+}
+
+.bg-image2 {
+    width: inherit;
+    height: 2000px;
+    background: url(../img/plymouthgin.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+.bg-image3 {
+    width: inherit;
+    height: 2000px;
+    background: url(../img/lighthouse.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+
+
+
+
+.title-text{
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);
+    color: white;
+    font-weight:bold;
+    border: 2px solid #f1f1f1;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index:2;
+    width:80%;
+    padding:20px;
+    text-align:center;
+}
+
+.results-text {
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);
+    color: white;
+    font-weight: bold;
+    border: 2px solid #f1f1f1;
+    position: absolute;
+    top: 113%;
+    left: 90%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    width: 20%;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+
+* {
     box-sizing: border-box;
 }
 
