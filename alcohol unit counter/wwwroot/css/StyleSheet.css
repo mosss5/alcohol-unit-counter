@@ -70,6 +70,27 @@
 }
 
 
+.options {
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);
+    color: white;
+    position: absolute;
+    top: 130%;
+    left: 70%;
+    font-size: 18px;
+    border:3px solid #ddd;
+}
+
+.pints-to-ml {
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);
+    color: white;
+    position: absolute;
+    top: 150%;
+    left: 70%;
+    font-size: 18px;
+    border: 3px solid #ddd;
+}
 
 
 * {
@@ -77,32 +98,43 @@
 }
 
 #myInput {
-    background-position: 10px 12px;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);
+    color: white;
     background-repeat: no-repeat;
-    width: 100%;
-    font-size: 166px;
+    width: 70%;
+    position: absolute;
+    top: 120%;
+    left: 15%;
+    font-size: 16px;
     padding: 12px 20px 12px 40px;
-    border: 1px solid #ddd;
-    margin-bottom: 12px;
+    border: 3px solid #ddd;
+    margin-bottom: 16px;
 }
 
 #myUL {
+    width: 400px;
+    height: 700px;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);
+    color: white;
     list-style-type: none;
-    padding: 0;
-    margin: 0;
+    padding: 5px;
+    position: absolute;
+    top: 130%;
+    left: 15%;
+    margin: 0 ;
 }
 
     #myUL li a {
         border: 1px solid #ddd;
         margin-top: -1px; /* Prevent double borders */
-        background-color: #f6f6f6;
-        padding: 12px;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0, 0.4);
+        padding: 13px;
         text-decoration: none;
         font-size: 18px;
         color: black;
         display: block
     }
-
-        #myUL li a:hover:not(.header) {
-            background-color: #eee;
-        }
