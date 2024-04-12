@@ -1,6 +1,8 @@
 ﻿const bacElement = document.getElementById('bac');
 const unitElement = document.getElementById('unit');
 const mlElement = document.getElementById('ml');
+const shotElement = document.getElementById('mlShot');
+
 
 function myFunction() {
     var input, filter, ul, li, a, i, txtValue;
@@ -71,5 +73,12 @@ function convertPintsToML() {
     mlElement.textContent = 'ml:' + milliliters;
 }
 
+function convertShotsToML() {
 
+    const shots = parseFloat(document.getElementById("shots").value) || 0;
+
+    const milliliters = shots * 25;
+
+    shotElement.textContent = 'ml:' + milliliters;
+}
 

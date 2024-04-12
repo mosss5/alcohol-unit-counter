@@ -2,7 +2,10 @@
     font-family:Arial, Helvetica, sans-serif;
 }
 
-
+img{
+    height:200px;
+    width:auto;
+}
 
 .bg-image{
     width: inherit;
@@ -92,6 +95,16 @@
     border: 3px solid #ddd;
 }
 
+.shots-to-ml {
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);
+    color: white;
+    position: absolute;
+    top: 170%;
+    left: 70%;
+    font-size: 18px;
+    border: 3px solid #ddd;
+}
 
 * {
     box-sizing: border-box;
@@ -125,6 +138,8 @@
     top: 130%;
     left: 15%;
     margin: 0 ;
+    border: 3px solid #ddd;
+    
 }
 
     #myUL li a {

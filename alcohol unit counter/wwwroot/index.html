@@ -56,6 +56,13 @@
         <div id="ml">ml:0</div>
     </div>
 
+    <div class="shots-to-ml">
+        <label for="shots">Enter quantity in shots:</label>
+        <input type="number" id="shots" min="0" step="0.01">
+        <button onclick="convertShotsToML()">Convert</button>
+        <div id="mlShot">ml:0</div>
+    </div>
+
 
 
 
@@ -63,37 +70,211 @@
     <ul id="myUL">
 
         <li>
-            <a>beer(5%)</a>
+            <a>Aperol</a>
             <label>ml</label>
-            <input type="number" id="5%" name="quantity" min="0" max="10000">
-            <input type="number" id="5%" name="percentage" min="0" max="10000">
+            <input type="number" name="quantity" min="0" max="10000">
+            <input type="number" name="percentage" min="0" max="10000">
             <lable>%</lable>
-            <img src="img/640x640.jpg" alt="beer(5%)">
+            <img src="img/unnamed (1).jpg">
         </li>
 
         <li>
-            <a>beer(4%)</a>
+            <a>Baijiu</a>
             <label>ml</label>
-            <input type="number" id="4%" name="quantity" min="0" max="10000">
-            <img src="img/640x640.jpg" alt="beer(4%)">
+            <input type="number" name="quantity" min="0" max="10000">
+            <input type="number" name="percentage" min="0" max="10000">
+            <lable>%</lable>
+            <img src="img/JZ0008A_HongXing_Er_Guo_Tou_Chiew_Baijiu_56_800x.jpg">
         </li>
 
         <li>
-            <a>beer(4.2%)</a>
+            <a>Baileys</a>
             <label>ml</label>
-            <input type="number" id="4.2%" name="quantity" min="0" max="10000">
-            <img src="img/640x640.jpg" alt="beer(4.2%)">
+            <input type="number" name="quantity" min="0" max="10000">
+            <input type="number" name="percentage" min="0" max="10000">
+            <lable>%</lable>
+            <img src="img/61yCcYJkqvL.jpg">
         </li>
 
-        <li><a>brandy</a></li>
+        <li>
+            <a>Beer</a>
+            <label>ml</label>
+            <input type="number" name="quantity" min="0" max="10000">
+            <input type="number" name="percentage" min="0" max="10000">
+            <lable>%</lable>
+            <img src="img/stella-artois-16oz-64pk-cans-37636_1.png">
+        </li>
 
-        <li><a>ale</a></li>
-        <li><a>whiskey</a></li>
+        <li>
+            <a>Brandy</a>
+            <label>ml</label>
+            <input type="number" name="quantity" min="0" max="10000">
+            <input type="number" name="percentage" min="0" max="10000">
+            <lable>%</lable>
+            <img src="img/J072-HOUSE-BRANDY-1.5L-SPIRITS-1.5L-HOUSE -BRANDY.jpg">
+        </li>
 
-        <li><a>tequila</a></li>
-        <li><a>red wine</a></li>
-        <li><a>cider</a></li>
+        <li>
+            <a>Cider</a>
+            <label>ml</label>
+            <input type="number" name="quantity" min="0" max="10000">
+            <input type="number" name="percentage" min="0" max="10000">
+            <lable>%</lable>
+            <img src="img/images.jpg">
+        </li>
 
+        <li>
+            <a>Cognac</a>
+            <label>ml</label>
+            <input type="number" name="quantity" min="0" max="10000">
+            <input type="number" name="percentage" min="0" max="10000">
+            <lable>%</lable>
+            <img src="img/unnamed.jpg">
+        </li>
+
+        <li>
+            <a>Diserano</a>
+            <label>ml</label>
+            <input type="number" name="quantity" min="0" max="10000">
+            <input type="number" name="percentage" min="0" max="10000">
+            <lable>%</lable>
+            <img src="img/amaretto-disaronno-diesel-limited-edition.jpg">
+        </li>
+
+        <li>
+            <a>Gin</a>
+            <label>ml</label>
+            <input type="number" name="quantity" min="0" max="10000">
+            <input type="number" name="percentage" min="0" max="10000">
+            <lable>%</lable>
+            <img src="img/6d246a52-ec06-4100-9eb6-946c4dc342f5_1318411020.jpg.jpg">
+        </li>
+
+        <li>
+            <a>Jägermeister</a>
+            <label>ml</label>
+            <input type="number" name="quantity" min="0" max="10000">
+            <input type="number" name="percentage" min="0" max="10000">
+            <lable>%</lable>
+            <img src="img/jaegermeister-70cl-1920x1920.jpg">
+        </li>
+
+        <li>
+            <a>Liqueurs</a>
+            <label>ml</label>
+            <input type="number" name="quantity" min="0" max="10000">
+            <input type="number" name="percentage" min="0" max="10000">
+            <lable>%</lable>
+            <img src="img/220c4e7c-7e7f-4094-827d-d3f6536cbc65_752924985.jpg">
+        </li>
+
+        <li>
+            <a>Perry</a>
+            <label>ml</label>
+            <input type="number" name="quantity" min="0" max="10000">
+            <input type="number" name="percentage" min="0" max="10000">
+            <lable>%</lable>
+            <img src="img/520.Lilleys-Bee-Sting-Perry-Bottle-500ml.jpg">
+        </li>
+
+        <li>
+            <a>Prosecco</a>
+            <label>ml</label>
+            <input type="number" name="quantity" min="0" max="10000">
+            <input type="number" name="percentage" min="0" max="10000">
+            <lable>%</lable>
+            <img src="img/98f54596-de41-4e6c-93ed-415871d991b0_1547345302.jpg">
+        </li>
+
+        <li>
+            <a>Red wine</a>
+            <label>ml</label>
+            <input type="number" name="quantity" min="0" max="10000">
+            <input type="number" name="percentage" min="0" max="10000">
+            <lable>%</lable>
+            <img src="img/Sao Luis Douro colheita tinto 2020.jpg">
+        </li>
+
+        <li>
+            <a>Rum</a>
+            <label>ml</label>
+            <input type="number" name="quantity" min="0" max="10000">
+            <input type="number" name="percentage" min="0" max="10000">
+            <lable>%</lable>
+            <img src="img/72706a83-6745-4950-89a7-fbdc25594859_2100373758.jpg">
+        </li>
+
+        <li>
+            <a>Sake</a>
+            <label>ml</label>
+            <input type="number" name="quantity" min="0" max="10000">
+            <input type="number" name="percentage" min="0" max="10000">
+            <lable>%</lable>
+            <img src="img/e69243nv-image-main.png">
+        </li>
+
+        <li>
+            <a>Shōchū</a>
+            <label>ml</label>
+            <input type="number" name="quantity" min="0" max="10000">
+            <input type="number" name="percentage" min="0" max="10000">
+            <lable>%</lable>
+            <img src="img/shochusilhouette.jpg">
+        </li>
+
+        <li>
+            <a>Soju</a>
+            <label>ml</label>
+            <input type="number" name="quantity" min="0" max="10000">
+            <input type="number" name="percentage" min="0" max="10000">
+            <lable>%</lable>
+            <img src="img/1623401248-043061000.jpg">
+        </li>
+
+        <li>
+            <a>Tequila</a>
+            <label>ml</label>
+            <input type="number" name="quantity" min="0" max="10000">
+            <input type="number" name="percentage" min="0" max="10000">
+            <lable>%</lable>
+            <img src="img/155853989281822.jpg">
+        </li>
+
+        <li>
+            <a>Vodka</a>
+            <label>ml</label>
+            <input type="number" name="quantity" min="0" max="10000">
+            <input type="number" name="percentage" min="0" max="10000">
+            <lable>%</lable>
+            <img src="img/smirnoff-red-label-vodka-70cl_50ecc35b-5b0b-4252-81ee-92fafcbc1e11.jpg">
+        </li>
+
+        <li>
+            <a>Whiskey</a>
+            <label>ml</label>
+            <input type="number" name="quantity" min="0" max="10000">
+            <input type="number" name="percentage" min="0" max="10000">
+            <lable>%</lable>
+            <img src="img/6_Talisker_10_year_70cl_bottle_02ccac5645_94d87292d4.jpg">
+        </li>
+
+        <li>
+            <a>White Wine</a>
+            <label>ml</label>
+            <input type="number" name="quantity" min="0" max="10000">
+            <input type="number" name="percentage" min="0" max="10000">
+            <lable>%</lable>
+            <img src="img/b3b10b_0ca5fee433ea4749ac683a2e2a0c63b0~mv2.jpg">
+        </li>
+
+        <li>
+            <a>Wine</a>
+            <label>ml</label>
+            <input type="number" name="quantity" min="0" max="10000">
+            <input type="number" name="percentage" min="0" max="10000">
+            <lable>%</lable>
+            <img src="img/500142-a.jpeg.jpg">
+        </li>
     </ul>
 
 
