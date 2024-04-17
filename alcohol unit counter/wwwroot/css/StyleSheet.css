@@ -3,8 +3,8 @@
 }
 
 img{
-    height:200px;
-    width:auto;
+    height:auto;
+    width:30%;
 }
 
 .bg-image{
@@ -67,7 +67,7 @@ img{
     color: white;
     position: absolute;
     top: 130%;
-    left: 70%;
+    left: 90%;
     font-size: 18px;
     border:3px solid #ddd;
 }
@@ -78,7 +78,7 @@ img{
     color: white;
     position: absolute;
     top: 150%;
-    left: 70%;
+    left: 90%;
     font-size: 18px;
     border: 3px solid #ddd;
 }
@@ -89,7 +89,7 @@ img{
     color: white;
     position: absolute;
     top: 170%;
-    left: 70%;
+    left: 90%;
     font-size: 18px;
     border: 3px solid #ddd;
 }
@@ -114,8 +114,8 @@ img{
 }
 
 #liquorList {
-    width: 400px;
-    height: 700px;
+    width: 40%;
+    height: 60%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
     color: white;
@@ -145,7 +145,7 @@ img{
     color: white;
     position: absolute;
     top: 190%;
-    left: 70%;
-    font-size: 18px;
+    left: 80%;
+    font-size: 140%;
     border: 3px solid #ddd;
 }
